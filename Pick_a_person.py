@@ -1,3 +1,3 @@
 import random
-list=["Sven","Phoenix","Ward","Stefan","Ilia"]
-print(random.choice(names))
+Namen=["Sven","Phoenix","Ward","Stefan","Ilia"]
+print(random.choice(Namen))
