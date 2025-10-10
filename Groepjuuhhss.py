@@ -1,6 +1,7 @@
 import random
 Teller=0
 Groepje=0
+probeer_opnieuw=1
 Mensen = ['Raad',
     'Josip',
     'Roan',
@@ -24,16 +25,22 @@ Mensen = ['Raad',
     'Kaydeon',
     'Sven W.',
     'Phoenix']
-Hoeveel=input("hoeveel mensen wil je in een groepje? ")
+while probeer_opnieuw==1:
+    try:
+         Hoeveel=int(input("hoeveel mensen wil je in een groepje? "))
+    except:
+         print("geldig getal AUB")
+    else:
+         probeer_opnieuw=0
 while len(Mensen) > 0:
-    Groepje += 1
-    Teller=0
-    print("Groepje", Groepje)
-    while Teller != int(Hoeveel):
-        if len(Mensen) == 0:
-            break
-        else:
-            Persoon = random.choice(Mensen)
-            print(Persoon)
-            Mensen.remove(Persoon)
-            Teller += 1
+        Groepje += 1
+        Teller=0
+        print("Groepje", Groepje)
+        while Teller != int(Hoeveel):
+            if len(Mensen) == 0:
+                break
+            else:
+                Persoon = random.choice(Mensen)
+                print(Persoon)
+                Mensen.remove(Persoon)
+                Teller += 1
